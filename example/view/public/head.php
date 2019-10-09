@@ -14,8 +14,8 @@ use ez\core\Route;
         <div class="layui-header">
             <div class="layui-logo">php工作流程引擎</div>
             <ul class="layui-nav layui-layout-left">
-                <li class="layui-nav-item <?php if(CONTROLLER_NAME == 'index') { echo 'layui-this'; } ?>" ><a href="">控制台</a></li>
-                <li class="layui-nav-item <?php if(CONTROLLER_NAME == 'document') { echo 'layui-this'; } ?>"><a href="">文档</a></li>
+                <li class="layui-nav-item <?php if(CONTROLLER_NAME == 'index') { echo 'layui-this'; } ?>" ><a href="/">控制台</a></li>
+                <li class="layui-nav-item <?php if(CONTROLLER_NAME == 'document') { echo 'layui-this'; } ?>"><a href="https://github.com/uej/process/blob/master/README.md">文档</a></li>
             </ul>
         </div>
   
