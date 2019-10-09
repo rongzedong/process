@@ -45,6 +45,8 @@ class Route
                 $param = explode('/', $pathinfo);
             } elseif (isset($_SERVER['PATH_INFO']) && !empty($_SERVER['PATH_INFO'])) {
                 $param = explode('/', trim(str_replace(Ez::config('urlSuffix'), '', filter_input(INPUT_SERVER, 'PATH_INFO')), '/'));
+            }elseif (isset($_SERVER['REQUEST_URI']) && !empty($_SERVER['REQUEST_URI'])) {
+                $param = explode('/', trim(str_replace(Ez::config('urlSuffix'), '', filter_input(INPUT_SERVER, 'REQUEST_URI')), '/'));
             }
             
         } else {
@@ -52,6 +54,7 @@ class Route
                 $param = explode('/', trim(str_replace(Ez::config('urlSuffix'), '', filter_input(INPUT_SERVER, 'PATH_INFO')), '/'));
             } else {
                 $param = [];
+                exit('no path_info and not request_uri');
             }
         }
         
